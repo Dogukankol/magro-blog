@@ -3,6 +3,10 @@
         display: flex;
         position: relative;
         padding: 50px 0;
+
+        @include phone {
+            padding: 20px 0
+        };
     }
 
     &__title {
@@ -21,16 +25,18 @@
 
     .swiper {
         counter-reset: swiper;
+        margin: 0;
 
         &-actions {
             height: 130px;
             position: absolute;
             right: -50px;
 
-            button:is(.swiper-button-disabled) {
-                cursor: no-drop;
-                opacity: 0.5;
+            @include phone {
+                right: 0;
+                display: none;
             }
+
         }
 
         &-slide {
@@ -68,13 +74,13 @@
             }
         }
 
-        &-button-next {
+        &-button-prev {
             top: auto;
             bottom: 0;
             background: $primary-color;
         }
 
-        &-button-prev {
+        &-button-next {
             border: 1px solid rgba($color: #666666, $alpha: 0.3);
             background: $white;
 

@@ -1,15 +1,23 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
+import Date from '../Date';
+import Author from '../Author';
+import Image from 'next/image';
+import { BadgeArrowRight, BadgeArrowRounded } from '../Badge';
 
-export function BoxOne({ date="12 DEC 2019", author="BY JAMES SMITH", head="5 Essential Rules to a Healthy and Happy Life" }) {
+export function Box({ image, badgeArrow, badgeArrowRounded, date, author, head, width = "888", height = "630" }) {
     return (
-        <div className='box__without-image'>
-            <div className="box__author-date">
-                <Link href={date}><span>{date}</span></Link> / <Link href={author}>{author}</Link> 
+        <div className='box'>
+            {image && <figure><Image src={`https://dummyimage.com/${width}x${height}/3a3a3a/fff`} width={width} height={height} full="true" alt={head} /></figure>}
+            {badgeArrowRounded && <BadgeArrowRounded text={badgeArrowRounded} />}
+            <div className="box__content">
+                <div className="box__specs">
+                    {badgeArrow && <Link href={badgeArrow}><BadgeArrowRight text={badgeArrow} /></Link>}  {date && <Link href={date}><Date text={date} /></Link>} {author && <Link href={author}><Author text={`/ ${author}`} /></Link>}
+                </div>
+                <p className='box__head'>
+                    <Link href={head}>{head}</Link>
+                </p>
             </div>
-            <p>
-            <Link href={head}>{head}</Link> 
-            </p>
         </div>
     )
 }

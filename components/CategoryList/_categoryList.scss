@@ -1,0 +1,44 @@
+.category__version-one {
+    &__list {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        @include phone {
+            flex-wrap: wrap;
+        }
+
+        .box {
+            margin-right: 29px;
+
+            @include phone {
+                margin:0  16px 16px 0;
+                flex-basis: calc(50% - 16px);
+            }
+
+            &:nth-child(even) {
+                @include phone {
+                    margin-right: 0;
+                }
+            }
+
+            &__content {
+                margin: 20px 0 0;
+            }
+
+            &__specs {
+                margin-bottom: 8px;
+            }
+
+            &__head {
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: 0px;
+
+                @include phone {
+                    font-size:  20px;
+                }
+            }
+        }
+    }
+}

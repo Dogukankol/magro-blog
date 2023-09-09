@@ -1,7 +1,14 @@
 $phone-max: 992px;
+$laptop-max: 1440px;
 
 @mixin phone {
   @media screen and (max-width: $phone-max) {
+    @content
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop-max) {
     @content
   }
 }

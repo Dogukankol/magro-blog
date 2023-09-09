@@ -1,16 +1,25 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { useRef, useCallback } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-import { BoxOne } from '@/components'
+import { Box } from '@/components'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBoltLightning } from "@fortawesome/free-solid-svg-icons";
 
 function Trending() {
-    const navigationNextRef = useRef(null);
-    const navigationPrevRef = useRef(null);
+    const sliderRef = useRef(null);
+
+    const handlePrev = useCallback(() => {
+        if (!sliderRef.current) return;
+        sliderRef.current.swiper.slidePrev();
+    }, []);
+
+    const handleNext = useCallback(() => {
+        if (!sliderRef.current) return;
+        sliderRef.current.swiper.slideNext();
+    }, []);
+
     const sliderItems = [
         {
             date: "12 DEC 2019",
@@ -63,29 +72,27 @@ function Trending() {
                 TRENDING
             </span>
             <Swiper
-                slidesPerView={4}
-                modules={[Navigation]}
-                navigation={{
-                    prevEl: navigationPrevRef.current,
-                    nextEl: navigationNextRef.current,
-                }}
-                onBeforeInit={(swiper) => {
-                    swiper.params.navigation.prevEl = navigationPrevRef.current;
-                    swiper.params.navigation.nextEl = navigationNextRef.current;
-                }}
-
+                ref={sliderRef}
+                breakpoints={{
+                    576: {
+                      slidesPerView: 1,
+                    },
+                    768: {
+                      slidesPerView: 4,
+                    },
+                  }}
             >
                 {
                     sliderItems.map((item, key) => (
-                        <SwiperSlide key={key}><BoxOne {...item} /></SwiperSlide>
+                        <SwiperSlide key={key}><Box {...item} /></SwiperSlide>
 
                     ))
                 }
             </Swiper>
 
             <div className='swiper-actions'>
-                <button className='swiper-button-next' ref={navigationNextRef}></button>
-                <button className='swiper-button-prev' ref={navigationPrevRef}></button>
+            <button className='swiper-button-prev' onClick={handlePrev} ></button>
+            <button className='swiper-button-next' onClick={handleNext} ></button>
             </div>
         </div>
     )

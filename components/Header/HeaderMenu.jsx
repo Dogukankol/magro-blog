@@ -4,7 +4,6 @@ import React from 'react'
 
 function HeaderMenu({isOpen}) {
     const menuList = ["HOME", "ENTERTAINMENT", "FASHION", "BUSINESS", "TEACH", "SPORTS", "CONTACT"];
-    console.log(isOpen)
     return (
         <nav className={`header__nav ${isOpen ? "header__nav--open" : ""}`.trim()}>
             <ul>

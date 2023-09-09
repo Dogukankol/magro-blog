@@ -1,0 +1,71 @@
+.box {
+    &--full {
+        display: flex;
+
+        @include phone {
+            flex-wrap: wrap;
+        }
+
+        figure {
+            margin-right: 62px;
+            width: 570px;
+
+            @include phone {
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+        .box {
+            &__content {
+                margin-top: 40px;
+                max-width: 425px;
+            }
+
+            &__specs {
+                margin-bottom: 16px;
+            }
+
+            &__head {
+                margin-bottom: 20px;
+                font-size: 40px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                color: $secondary-color;
+                line-height: 1.125;
+            }
+
+            &__description {
+                margin-bottom: 30px;
+                color: #666666;
+                font-size: 18px;
+                line-height: 1.45;
+            }
+
+            &__author {
+                position: relative;
+                figure {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+
+                    figcaption {
+                        margin-left: 8px;
+                    }
+                }
+
+                .badge-arrow-rounded {
+                    top: 50%;
+                    left: 200px;
+                    transform: translateY(-50%);
+                }
+
+            }
+        }
+    }
+}

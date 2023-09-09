@@ -15,7 +15,6 @@ function Header() {
     setIsOpen(!isOpen)
   }
 
-  console.log(isOpen)
   return (
     <header className='header'>
       <div className='header__stripe'>

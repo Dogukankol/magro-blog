@@ -1,4 +1,9 @@
 .box {
+    position: relative;
+
+    figure {
+        position: relative;
+    }
     &__without-image {
         p {
             margin-top: 6px;
@@ -6,12 +11,13 @@
             font-weight: 600;
         }
 
-        .box__author-date {
+        .box__specs {
             color: $secondary-color-lighter;
-            span {
-                color: $primary-color;
-            }
 
         }
+    }
+
+    &__image {
+        position: relative;
     }
 }

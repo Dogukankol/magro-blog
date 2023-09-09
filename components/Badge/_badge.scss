@@ -1,0 +1,40 @@
+.badge {
+    &-arrow-rounded {
+        background: url(../../assets/images/badge-arrow-rounded.png);
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 45px;
+        height: 45px;
+        line-height: 35px;
+        text-align: center;
+        color: $white;
+        font-weight: 600;
+        font-size: 17px;
+        letter-spacing: 0.68px;
+    }
+
+    &-arrow-right {
+        background: #1B1B1B;
+        padding: 1.4px 9px;
+        color: $white;
+        font-weight: 500;
+        position: relative;
+        margin-right: 12px;
+        font-size: 15px;
+        letter-spacing: 0.3px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -8px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 8px;
+            border-color: transparent transparent transparent #1b1b1b;
+        }
+    }
+}
