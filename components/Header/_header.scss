@@ -1,0 +1,220 @@
+.header {
+    overflow-x: hidden;
+
+    &__stripe {
+        height: 50px;
+        background: #ffffff;
+
+        @include phone {
+            height: 100px;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            align-items: center;
+
+            @include phone {
+                flex-wrap: wrap;
+            }
+
+        }
+
+        span {
+            color: $primary-color;
+            font-weight: 600;
+            letter-spacing: 0.9px;
+
+            svg {
+                margin-right: 4px;
+            }
+
+            @include phone {
+                flex-basis: 90px;
+            }
+        }
+
+        .swiper {
+            height: 100%;
+            margin-left: 36px;
+
+            @include phone {
+                flex-basis: calc(100% - 120px);
+                margin-left: auto;
+                height: 50px;
+            }
+
+            .swiper-slide {
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: $secondary-color-lighter;
+                    font-size: 15px;
+
+                    @include phone {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        height: 40px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    &__social-media {
+        display: flex;
+        align-items: center;
+
+        span {
+            color: $secondary-color-darker;
+            letter-spacing: 0.48px;
+        }
+
+        &__list {
+            ul {
+                display: flex;
+                margin-left: 20px;
+
+                @include phone {
+                    margin-left: 32px;
+                }
+
+                li {
+                    width: 33px;
+                    line-height: 33px;
+                    color: $white;
+                    margin-right: 4px;
+                    text-align: center;
+
+                    a {
+                        color: $white;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &--facebook {
+                background: #1877F2;
+            }
+
+            &--twitter {
+                background: #14171A;
+            }
+
+            &--instagram {
+                background: #f09433;
+                background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+
+            }
+        }
+
+    }
+
+    &__main {
+        height: 166px;
+        background: $black;
+        padding: 26px 0 20px 0;
+
+        @include phone {
+            height: 120px;
+            padding: 20px 0 15px 0;
+        }
+
+        &__upper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+    }
+
+    &__logo {
+        width: 256px;
+        height: auto;
+
+        @include phone {
+            width: 128px;
+        }
+    }
+
+    &__menu--opener {
+        color: $secondary-color-lighter;
+        font-weight: 500;
+        font-size: 17px;
+
+        svg {
+            margin-right: 8px;
+        }
+    }
+
+    &__search {
+        max-width: 102px;
+        display: flex;
+        border-bottom: 1px solid $secondary-color-lighter;
+
+        input {
+            border: none;
+            background: transparent;
+            width: 100%;
+            text-align: center;
+            color: $secondary-color-lighter;
+            font-weight: 500;
+            font-size: 17px;
+            letter-spacing: 1.02px;
+        }
+
+        button {
+            color: $secondary-color-lighter;
+        }
+    }
+
+    &__nav {
+        @include phone {
+            display: none;
+        }
+
+        &--open {
+            @include phone {
+                display: block;
+            }
+        }
+
+        ul {
+            display: flex;
+            
+            @include phone {
+                overflow: scroll;
+                padding-bottom: 5px;
+            }
+
+            li {
+                margin-right: 48px;
+
+                a {
+                    color: $white;
+                    text-transform: uppercase;
+                    letter-spacing: 1.02px;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

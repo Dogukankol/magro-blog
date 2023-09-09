@@ -1,0 +1,17 @@
+.box {
+    &__without-image {
+        p {
+            margin-top: 6px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .box__author-date {
+            color: $secondary-color-lighter;
+            span {
+                color: $primary-color;
+            }
+
+        }
+    }
+}
