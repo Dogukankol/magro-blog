@@ -1,8 +1,9 @@
 import "@/assets/css/styles.scss";
-import { Barlow_Condensed } from 'next/font/google';
-import { Header, Footer } from '@/components/'
+import "@fortawesome/fontawesome-svg-core/styles.css"; 
 
-const barlow = Barlow_Condensed({ subsets: ['latin'], weight: ['100', '400', '900'] })
+import { Header, Footer } from '@/components/'
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false; 
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={barlow.className}>
+      <body>
         <Header />
         <main>
           {children}
