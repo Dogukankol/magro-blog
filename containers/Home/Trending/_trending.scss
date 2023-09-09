@@ -1,0 +1,86 @@
+.trending {
+    .container {
+        display: flex;
+        position: relative;
+        padding: 50px 0;
+    }
+
+    &__title {
+        font-size: 20px;
+        color: $secondary-color;
+        font-weight: bold;
+        transform: rotate(-90deg) translateX(-50%);
+        position: absolute;
+        left: -80px;
+
+        svg {
+            color: $primary-color;
+            margin-right: 6px;
+        }
+    }
+
+    .swiper {
+        counter-reset: swiper;
+
+        &-actions {
+            height: 130px;
+            position: absolute;
+            right: -50px;
+
+            button:is(.swiper-button-disabled) {
+                cursor: no-drop;
+                opacity: 0.5;
+            }
+        }
+
+        &-slide {
+            border-left: 1px solid rgba($color: #666666, $alpha: 0.3);
+            padding: 0 38px 0 20px;
+            height: 130px;
+            display: flex;
+            align-items: flex-end;
+
+            &::before {
+                counter-increment: swiper;
+                content: counter(swiper)".";
+                font-size: 30px;
+                font-weight: 800;
+                letter-spacing: 1.5px;
+                position: absolute;
+                color: #D9D9D9;
+                top: 0;
+                left: 20px;
+            }
+        }
+
+        &-button-prev, &-button-next {
+            left: auto;
+            width: 50px;
+            right: 0;
+            top: 0;
+            margin: 0;
+            height: 50%;
+            opacity: 1;
+
+            &::after {
+                font-size: 20px;
+                color: $white;
+            }
+        }
+
+        &-button-next {
+            top: auto;
+            bottom: 0;
+            background: $primary-color;
+        }
+
+        &-button-prev {
+            border: 1px solid rgba($color: #666666, $alpha: 0.3);
+            background: $white;
+
+            &::after {
+                color: $secondary-color;
+            }
+        }
+    }
+}
