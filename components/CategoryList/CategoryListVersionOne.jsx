@@ -1,8 +1,9 @@
-import { Box, BoxFull } from '@/components'
+import { Box, BoxFull, SectionHead } from '@/components'
 import React from 'react'
 
-function Fashion() {
-    const magazineProp = [{
+export default function CategoryListVersionOne({sectionHeadProp, magazineSingleProp, magazineItemsProp}) {
+    const sectionHead = sectionHeadProp || "FASHION" 
+    const magazineSingle = magazineSingleProp || [{
         date: "12 DEC 2019",
         image: true,
         badgeArrowRounded: true,
@@ -13,7 +14,7 @@ function Fashion() {
         authorImg: true
     }];
 
-    const sliderItems = [
+    const magazineItems = magazineItemsProp || [
         {
             date: "12 DEC 2019",
             image: true,
@@ -48,22 +49,23 @@ function Fashion() {
         }
     ]
     return (
-        <>
-            {
-                magazineProp.map((item, key) => (
-                    <BoxFull key={key} {...item} />
-                ))
-            }
-
-            <div className="category__version-one__list">
+        <section className='category__one'>
+            <div className="container">
+                <SectionHead text={sectionHead} />
                 {
-                    sliderItems.map((item, key) => (
-                        <Box key={key} {...item} />
+                    magazineSingle.map((item, key) => (
+                        <BoxFull key={key} {...item} />
                     ))
                 }
+
+                <div className="category__one__list">
+                    {
+                        magazineItems.map((item, key) => (
+                            <Box key={key} {...item} />
+                        ))
+                    }
+                </div>
             </div>
-        </>
+        </section>
     )
 }
-
-export default Fashion

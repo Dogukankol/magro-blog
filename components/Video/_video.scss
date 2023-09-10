@@ -1,0 +1,140 @@
+.video {
+    &__full {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+
+        .video {
+            &__content {
+                position: absolute;
+                bottom: 50px;
+                left: 60px;
+                z-index: 1;
+                color: $white;
+
+                @include phone {
+                    bottom: 16px;
+                    left: 16px;
+                }
+
+            }
+
+            &__head {
+                font-size: 40px;
+                font-weight: 600;
+                max-width: 553px;
+                width: 100%;
+                margin-bottom: 14px;
+                letter-spacing: 0px;
+
+                @include phone {
+                    font-size: 24px;
+                }
+            }
+
+            &__specs {
+                color: #EAEAEA;
+                letter-spacing: 0.32px;
+                font-size: 16px;
+
+
+                svg {
+                    color: $primary-color;
+                }
+            }
+
+            &__starter {
+                font-size: 20px;
+                position: absolute;
+                left: 62px;
+                top: 42px;
+                width: 70px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+
+                @include phone {
+                    left: 15px;
+                    top: 15px;
+                }
+
+                svg {
+                    color: $white;
+                    position: relative;
+                    z-index: 2;
+                }
+
+                &::before, &::after {
+                    content: '';
+                    display: block;
+                    @include borderRadius(50%);
+                    background: $primary-color;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.5;
+                }
+
+                &::after {
+                    width: 55px;
+                    height: 55px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+        }
+    }
+
+    &__thumbnail {
+        color: $white;
+        margin-bottom: 18px;
+
+        &:last-child {
+            margin: 0;
+        }
+        figure {
+            position: relative;
+            span {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                width: 37px;
+                height: 37px;
+                background: $white;
+                @include borderRadius(50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    color: $secondary-color;
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .video {
+            &__head {
+                margin: 10px 0;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+            }
+        }
+    }
+}

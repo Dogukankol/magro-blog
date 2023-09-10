@@ -5,7 +5,7 @@ import Author from '../Author';
 import Image from 'next/image';
 import { BadgeArrowRight, BadgeArrowRounded } from '../Badge';
 
-function BoxFull({ image, badgeArrow, badgeArrowRounded, date, author, head, width = "570", height = "374", description }) {
+function BoxFull({ image, badgeArrow, badgeArrowRounded, date, author, head, width = "570", height = "374", description, authorImg  }) {
     return (
         <div className='box--full'>
             {image && <figure><Image src={`https://dummyimage.com/${width}x${height}/3a3a3a/fff`} width={width} height={height} full="true" alt={head} /></figure>}
@@ -20,6 +20,7 @@ function BoxFull({ image, badgeArrow, badgeArrowRounded, date, author, head, wid
                     {description}
                 </p>
 
+                {authorImg && 
                 <div className="box__author">
                     <figure>
                         <Image src={`https://dummyimage.com/50x50/3a3a3a/fff`} width={50} height={50} alt={author} /> <figcaption>{author}</figcaption>
@@ -27,6 +28,7 @@ function BoxFull({ image, badgeArrow, badgeArrowRounded, date, author, head, wid
                     {badgeArrowRounded && <BadgeArrowRounded text={badgeArrowRounded} />}
 
                 </div>
+                }
             </div>
         </div>
     )

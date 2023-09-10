@@ -1,8 +1,8 @@
-import { SectionHead } from '@/components'
 import React from 'react'
-import Fashion from './Fashion'
+import {CategoryListVersionOne, CategoryListVersionTwo, CategoryListVersionThree, CategoryListVersionFour, CategoryListVersionFive} from '@/components'
 import HotAgenda from './HotAgenda'
 import Trending from './Trending'
+import TopVideos from './TopVideos'
 
 
 function HomeC() {
@@ -14,12 +14,13 @@ function HomeC() {
       <section className='hot-agenda'>
         <HotAgenda />
       </section>
-      <section className='category__version-one'>
-        <div className='container'>
-          <SectionHead text="FASHION" />
-          <Fashion />
-        </div>
-      </section>
+      <CategoryListVersionOne />
+      <CategoryListVersionTwo />
+      <TopVideos />
+      <CategoryListVersionThree />
+      <CategoryListVersionFour />
+      <CategoryListVersionFive />
+
     </>
   )
 }

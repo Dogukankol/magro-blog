@@ -1,0 +1,45 @@
+.tabs {
+    &__head {
+        &__arrow {
+            .tabs__head__item {
+                margin:0 32px 30px 0;
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: 1.08px;
+                color: $secondary-color-lighter;
+
+                &--active {
+                    padding: 10px 20px;
+                    background: $primary-color;
+                    color: $white;
+                    position: relative;
+                    display: inline-block;
+                    text-align: center;
+                    z-index: 1;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        left: 28px;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 10px 12px 0 0;
+                        border-color: $primary-color transparent transparent transparent;
+                    }
+                }
+            }
+        }
+    }
+    
+    &__content {
+        &__item {
+            display: none;
+
+            &--active {
+                display: block;
+            }
+        }
+    }
+}

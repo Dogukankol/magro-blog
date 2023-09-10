@@ -11,3 +11,10 @@ export function BadgeArrowRight({text}) {
     <span className='badge-arrow-right'>{text}</span>
   )
 }
+
+
+export function BadgeArrowBottom({text, tag="span"}) {
+  return (
+    React.createElement(tag, { className: 'badge-arrow-bottom' }, text)
+  )
+}

@@ -11,7 +11,6 @@ function HeaderSearch() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(value)
     }
 
     return (

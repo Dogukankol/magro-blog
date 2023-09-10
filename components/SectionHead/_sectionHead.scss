@@ -15,31 +15,5 @@
             height: 1px;
             background: rgba($color: $secondary-color, $alpha: 0.3);
         }
-
-        span {
-            padding: 8px 28px 10px;
-            background: $primary-color;
-            color: $white;
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: 1.32px;
-            position: relative;
-            display: inline-block;
-            text-align: center;
-            margin: 0 auto;
-            z-index: 1;
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -10px;
-                left:28px;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 10px 12px 0 0;
-                border-color: $primary-color transparent transparent transparent;
-            }
-        }
     }
 }

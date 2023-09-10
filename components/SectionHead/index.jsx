@@ -1,9 +1,10 @@
 import React from 'react'
+import { BadgeArrowBottom } from '../Badge'
 
 function SectionHead({text="FASHION"}) {
   return (
     <div className='section-head'>
-      <span>{text}</span>
+      <BadgeArrowBottom text={text} tag="h2" />
     </div>
   )
 }
