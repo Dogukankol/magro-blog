@@ -1,0 +1,61 @@
+.detail {
+
+    &>.container {
+        display: grid;
+        grid-template-columns: 770px 325px;
+        grid-column-gap: 73px;
+        padding-top: 60px;
+
+        @include phone {
+            display: block;
+        }
+    }
+
+    &__left {
+        width: 100%;
+    }
+
+    &__content {
+        font-size: 18px;
+        color: #666666;
+        letter-spacing: 0.18px;
+        margin-bottom: 30px;
+
+
+        &__quote {
+            margin: 0 0 30px;
+            color: $secondary-color;
+            font-size: 46px;
+            font-weight: bold;
+            font-style: italic;
+
+            @include phone {
+                font-size: 36px;
+            }
+        }
+
+        &>figure,
+        &>.video__full {
+            margin: 20px 0;
+        }
+
+
+        ul {
+            padding-left: 40px;
+
+            li {
+                line-height: 1.7;
+
+                &::before {
+                    content: "\2022";
+                    color: #333333;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1em;
+                }
+            }
+        }
+    }
+
+}

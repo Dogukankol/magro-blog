@@ -1,0 +1,64 @@
+.detail__share {
+    margin-top: 24px;
+    padding: 25px 28px;
+    border: 1px solid #EAEAEA;
+    background: $white;
+    display: flex;
+    align-items: center;
+
+    &>span {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+        margin-left: 28px;
+
+        @include phone {
+            flex-wrap: wrap;
+        }
+
+        li {
+            line-height: 32px;
+            color: $white;
+            margin-right: 10px;
+            padding: 0 12px;
+
+            @include phone {
+                margin-right: 4px;
+                margin-bottom: 4px;
+            }
+
+            svg {
+                margin-right: 4px;
+            }
+
+            span {
+                font-size: 14px;
+                letter-spacing: 1px;
+                border-left: 1px solid rgba($color: #FFFFFF, $alpha: 0.3);
+                padding-left: 6px;
+            }
+        }
+    }
+
+    &--facebook {
+        background: #1877F2;
+    }
+
+    &--twitter {
+        background: #14171A;
+    }
+
+    &--pinterest {
+        background: #E60023;
+
+        svg {
+            margin-right: 0!important;
+        }
+    }
+
+    
+
+}

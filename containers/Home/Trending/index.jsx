@@ -75,12 +75,12 @@ function Trending() {
                 ref={sliderRef}
                 breakpoints={{
                     576: {
-                      slidesPerView: 1,
+                        slidesPerView: 1,
                     },
                     768: {
-                      slidesPerView: 4,
+                        slidesPerView: 4,
                     },
-                  }}
+                }}
             >
                 {
                     sliderItems.map((item, key) => (
@@ -91,8 +91,8 @@ function Trending() {
             </Swiper>
 
             <div className='swiper-actions'>
-            <button className='swiper-button-prev' onClick={handlePrev} ></button>
-            <button className='swiper-button-next' onClick={handleNext} ></button>
+                <button className='swiper-button-prev' onClick={handlePrev} ></button>
+                <button className='swiper-button-next' onClick={handleNext} ></button>
             </div>
         </div>
     )

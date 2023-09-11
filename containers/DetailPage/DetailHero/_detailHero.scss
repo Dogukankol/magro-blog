@@ -1,0 +1,98 @@
+.detail__hero {
+    position: relative;
+
+    &>figure {
+        @include phone {
+            height: 480px;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 77px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include laptop {
+            bottom: 26px;
+        }
+
+        @include phone {}
+    }
+
+    &__favorite {
+        display: flex;
+        align-items: center;
+
+        svg {
+            background: #FFAA00;
+            font-size: 24px;
+            color: $white;
+            padding: 11px 12px 14px;
+            border-radius: 50%;
+            margin-right: 14px;
+        }
+    }
+
+    &__tag {
+        font-size: 13px;
+        color: $white;
+        background: #008AFF;
+        @include boxShadow(1px 2px 1px #0000001A);
+        padding: 3px 15px 4px;
+    }
+
+    &__head {
+        font-size: 60px;
+        font-weight: bold;
+        color: $white;
+        max-width: 916px;
+        width: 100%;
+        margin: 14px 0 24px;
+        text-shadow: 0.5px 0.87px 3px #00000033;
+        letter-spacing: 0.6px;
+
+        @include phone {
+            margin: 12px 0;
+            font-size: 24px;
+        }
+    }
+
+    &__specs {
+        color: #9C9C9C;
+        display: flex;
+        align-items: center;
+
+        @include phone {
+            flex-wrap: wrap;
+        }
+
+        .author {
+            margin-right: 41px;
+        }
+
+        .box__date {
+            color: #9C9C9C;
+            margin-right: 28px;
+
+        }
+
+        .badge {
+            margin-right: 25px;
+            line-height: 27px;
+            padding: 0 14px;
+            background: rgba($color: $primary-color, $alpha: 0.21);
+            color: $primary-color;
+            @include borderRadius(16px);
+
+            svg {
+                color: $primary-color;
+            }
+        }
+
+        svg {
+            margin-right: 4px;
+        }
+    }
+
+}

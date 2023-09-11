@@ -1,0 +1,72 @@
+.detail__reactions {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        @include phone {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        position: relative;        
+        font-size: 16px;
+        font-weight: bold;
+        color: #333333;
+        cursor: pointer;
+
+        @include phone {
+            // margin-bottom: 32px;
+            margin: 0 auto 32px;
+        }
+
+        &__emoji {
+            background: #F2F2F2;
+            padding: 16px;
+            @include borderRadius(50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include phone {
+                padding: 8px;
+            }
+
+            figure {
+                padding: 20px;
+                background: #FDFBCA;
+                @include borderRadius(50%);
+
+                @include phone {
+                    padding: 10px;
+                }
+            }
+        }
+
+        span {
+            position: absolute;
+            right: -8px;
+            top: -14px;
+            background: #F9D568;
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            @include borderRadius(50%);
+        }
+
+        p {
+            margin-top: 8px;
+            @include borderRadius(3px);
+            background: #E6E6E6;
+            text-align: center;
+            line-height: 29px;
+        }
+    }
+
+    h4 {
+        margin: 45px 0 60px;
+    }
+}
