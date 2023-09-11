@@ -12,7 +12,7 @@ export function VideoThumbnail({ head = "He Speaks 11 Languages – 7 Tricks To 
         <div className="video__thumbnail">
             <Link href={head}>
                 <figure>
-                    <Image src={`https://dummyimage.com/${width}x${height}/3a3a3a/fff`} width={width} height={height} full="true" alt={head} />
+                    <Image src={`https://dummyimage.com/${width}x${height}/3a3a3a/fff`} width={width} height={height}  alt={head} />
                     <span><FontAwesomeIcon icon={faPlay} /></span>
                 </figure>
                 <div className="video__content">

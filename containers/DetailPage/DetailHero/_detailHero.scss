@@ -77,19 +77,6 @@
 
         }
 
-        .badge {
-            margin-right: 25px;
-            line-height: 27px;
-            padding: 0 14px;
-            background: rgba($color: $primary-color, $alpha: 0.21);
-            color: $primary-color;
-            @include borderRadius(16px);
-
-            svg {
-                color: $primary-color;
-            }
-        }
-
         svg {
             margin-right: 4px;
         }

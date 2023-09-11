@@ -2,10 +2,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock, faEye } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 
-import { faGripfire } from '@fortawesome/free-brands-svg-icons'
 import Image from 'next/image'
 import React from 'react'
-import { AuthorWithImage, Date } from '@/components'
+import { AuthorWithImage, BadgeFire, Date, SimpleIconText } from '@/components'
 
 function DetailHero({ head = "Can You Guess What Type Of Music Each Person Is Listening", author = "BY JAWN STAFF", tag="SPORT" }) {
     return (
@@ -20,12 +19,8 @@ function DetailHero({ head = "Can You Guess What Type Of Music Each Person Is Li
                 <div className="detail__hero__specs">
                     <AuthorWithImage author={author} />
                     <Date><FontAwesomeIcon icon={faClock} /> October 18, 2020</Date>
-                    <div className="badge">
-                        <FontAwesomeIcon icon={faGripfire} /> 120
-                    </div>
-                    <div className="detail__hero__view-count">
-                        <FontAwesomeIcon icon={faEye} /> 1.3K VIEWS
-                    </div>
+                    <BadgeFire />
+                    <SimpleIconText><FontAwesomeIcon icon={faEye} /> 1.3K Views</SimpleIconText>
                 </div>
             </div>
         </div>

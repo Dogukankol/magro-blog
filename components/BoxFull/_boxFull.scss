@@ -1,9 +1,17 @@
 .box {
-    &--full {
+    &__full {
         display: flex;
 
         @include phone {
             flex-wrap: wrap;
+        }
+
+        &>a {
+            position: relative;
+            @include phone {
+                display: block;
+                width: 100%;
+            }
         }
 
         figure {
@@ -20,10 +28,23 @@
             &__content {
                 margin-top: 40px;
                 max-width: 425px;
+
+                @include phone {
+                    margin-top: 24px;
+                }
             }
 
             &__specs {
                 margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+
+                .simple-icon-text {
+                    margin-right: 20px;
+                    color: #999999;
+                }
+
+                
             }
 
             &__head {

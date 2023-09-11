@@ -1,0 +1,61 @@
+.detail__author {
+    padding: 37px 60px 37px 33px;
+    display: flex;
+    align-items: center;
+    @include boxShadow(3px 4px 35px #00000030);
+    margin-top: 80px;
+
+    @include phone {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    figure {
+        margin-right: 34px;
+        width: 123px;
+        height: 123px;
+
+        @include phone {
+            width: 64px;
+            height: 64px;
+            margin-right: 16px;
+        }
+    }
+
+    span {
+        color: #BFBFBF;
+    }
+
+    h5 {
+        font-size: 25px;
+        color: #222222;
+
+    }
+
+    p {
+        font-size: 18px;
+        color: #848484;
+        margin-top: 12px;
+
+        @include phone {
+            
+            
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            height: 70px;
+            overflow: hidden;
+        }
+    }
+
+    &__content {
+        max-width: calc(100% - 123px - 34px);
+
+        @include phone {
+            max-width: calc(100% - 64px - 16px);
+        }
+
+    }
+}

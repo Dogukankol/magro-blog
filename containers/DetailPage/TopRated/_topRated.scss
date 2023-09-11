@@ -1,0 +1,58 @@
+.top-rated {
+    margin-top: 65px;
+
+    h4 {
+        margin-bottom: 30px;
+    }
+
+    .box__full {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &>a {
+            &>figure {
+                width: 350px;
+                margin: 0;
+
+                @include phone {
+                    width: 100%;
+                }
+            }
+        }
+    
+        .box {
+            &__content {
+                margin-top: 30px;
+                margin-left: 50px;
+                max-width: calc(100% - 400px);
+
+                @include phone {
+                    max-width: 100%;
+                    margin-top: 24px;
+                    margin-left: 0;
+                }
+            }
+    
+            &__head {
+                font-size: 36px;
+                margin-bottom: 25px;
+            }
+
+            &__specs {
+                margin-bottom: 15px;
+            }
+    
+            
+        }
+    
+        .author {
+            figcaption {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

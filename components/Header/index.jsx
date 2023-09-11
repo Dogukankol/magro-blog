@@ -27,7 +27,7 @@ function Header() {
         <div className="container">
           <div className="header__main__upper">
             <button className='header__menu--opener' onClick={handleOpen}><FontAwesomeIcon icon={faBars} />MENU</button>
-            <Image src={Logo} full="true" alt="Logo" className='header__logo' />
+            <Image src={Logo}  alt="Logo" className='header__logo' />
             <HeaderSearch />
           </div>
           <div className="header__main__bottom">

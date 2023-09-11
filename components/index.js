@@ -4,7 +4,7 @@ import {Box} from './Box'
 import Date from './Date';
 import Author from './Author';
 import AuthorWithImage from './AuthorWithImage';
-import {BadgeArrowRounded} from './Badge';
+import {BadgeArrowRounded, BadgeArrowRight, BadgeArrowBottom, BadgeFire} from './Badge';
 import SectionHead from './SectionHead';
 import BoxFull from './BoxFull';
 import CategoryListVersionOne from './CategoryList/CategoryListVersionOne';
@@ -15,6 +15,8 @@ import CategoryListVersionFive from './CategoryList/CategoryListVersionFive';
 import { Tabs, TabSwitcher, TabContent} from './Tabs';
 import { VideoThumbnail, VideoFull} from './Video';
 import Tags from './Tags';
+import SimpleIconText from './SimpleIconText'
+import OtherCategories from './OtherCategories'
 
 
 
@@ -25,6 +27,9 @@ export { Header,
         Author,
         AuthorWithImage,
         BadgeArrowRounded,
+        BadgeArrowRight,
+        BadgeFire,
+        BadgeArrowBottom,
         SectionHead,
         BoxFull,
         CategoryListVersionOne,
@@ -37,6 +42,7 @@ export { Header,
         TabContent,
         VideoThumbnail,
         VideoFull,
-        Tags
-
+        Tags,
+        SimpleIconText,
+        OtherCategories
 };

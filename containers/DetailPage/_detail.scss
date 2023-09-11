@@ -58,4 +58,110 @@
         }
     }
 
+    &__right {
+
+        &>div {
+            margin-bottom: 32px;
+        }
+
+        @include phone {
+            display: none;
+        }
+
+        &__head {
+            border-bottom: 2px solid #222222;
+
+            span {
+                font-size: 14px;
+                font-weight: bold;
+                background: #222222;
+                padding: 10px 20px 8px 14px;
+
+                &::after {
+                    border-color: #222222 transparent transparent transparent;
+                    left: 16px;
+                }
+            }
+        }
+
+        &__author {
+            &__content {
+                margin-top: 40px;
+                padding: 40px;
+                border: 1px solid #000000;
+                text-align: center;
+
+                &>a {
+                    position: relative;
+                    display: block;
+                    margin-bottom: 30px;
+
+                    figure {
+                        img {
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .badge__author-star {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%, 50%);
+                        @include boxShadow(0px 0px 43px #00000059);
+                        background: #E2C006;
+                        line-height: 34px;
+                        width: 34px;
+                        text-align: center;
+                        color: $white;
+                        @include borderRadius(50%);
+                    }
+                }
+
+                h5 {
+                    font-size: 28px;
+                    font-weight: bold;
+                    margin-bottom: 16px;
+                    color: #333333;
+                }
+
+                p {
+                    color: #666666;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__social-media {
+                display: flex;
+                margin: 0 -20px;
+                justify-content: space-between;
+                ul {
+                    margin-left: 0;
+
+                    li {
+                        margin: 0;
+                        width: 44px;
+                        line-height: 44px;
+                    }
+                }
+            }
+        }
+
+        .category__two {
+            &__list {
+                grid-template-columns: 1fr;
+            }
+
+            &__grid {
+                padding: 0;
+
+                &:last-child {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
 }

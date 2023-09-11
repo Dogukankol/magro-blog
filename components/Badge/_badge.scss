@@ -63,4 +63,37 @@
             border-color: $primary-color transparent transparent transparent;
         }
     }
+
+    &-fire {
+        margin-right: 25px;
+        line-height: 27px;
+        padding: 0 14px;
+        background: rgba($color: $primary-color, $alpha: 0.21);
+        color: $primary-color;
+        @include borderRadius(16px);
+
+        svg {
+            color: $primary-color;
+        }
+    }
+
+    &__top-rated {
+        position: absolute;
+        top: 35px;
+        right: 0;
+        transform: translateX(50%);
+        font-size: 16px;
+        line-height: 50px;
+        text-align: center;
+        width: 50px;
+        color: $white;
+        background: #7348E0;
+        border-radius: 50%;
+
+        @include phone {
+            top: 10px;
+            right: 10px;
+            transform: unset;
+        }
+    }
 }

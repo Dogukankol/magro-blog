@@ -1,0 +1,43 @@
+.other-categories {
+    margin-top: 30px;
+
+    li {
+        font-size: 20px;
+        font-weight: bold;
+        color: #121212;
+        line-height: 2;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: calc(100% - 48px);
+            height: 1px;
+            background: $black;
+            top: 50%;
+            left: 0;
+        }
+
+        a {
+            display: inline-block;
+            padding-right: 15px;
+            background: $white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge__other-categories {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            @include borderRadius(50%);
+            border: 1px solid #121212;
+            font-size: 14px;
+            text-align: center;
+            padding: 0;
+        }
+    }
+}
