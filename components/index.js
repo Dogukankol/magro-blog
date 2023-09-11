@@ -3,6 +3,7 @@ import Footer from './Footer';
 import {Box} from './Box'
 import Date from './Date';
 import Author from './Author';
+import AuthorWithImage from './AuthorWithImage';
 import {BadgeArrowRounded} from './Badge';
 import SectionHead from './SectionHead';
 import BoxFull from './BoxFull';
@@ -13,6 +14,8 @@ import CategoryListVersionFour from './CategoryList/CategoryListVersionFour';
 import CategoryListVersionFive from './CategoryList/CategoryListVersionFive';
 import { Tabs, TabSwitcher, TabContent} from './Tabs';
 import { VideoThumbnail, VideoFull} from './Video';
+import Tags from './Tags';
+
 
 
 export { Header,
@@ -20,6 +23,7 @@ export { Header,
         Box,
         Date,
         Author,
+        AuthorWithImage,
         BadgeArrowRounded,
         SectionHead,
         BoxFull,
@@ -32,6 +36,7 @@ export { Header,
         TabSwitcher,
         TabContent,
         VideoThumbnail,
-        VideoFull
+        VideoFull,
+        Tags
 
 };

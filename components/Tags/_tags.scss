@@ -1,0 +1,19 @@
+.tag {
+    display: inline-block;
+    margin-right: 6px;
+    a {
+        padding: 0 12px;
+        line-height: 35px;
+        border: 1px solid #EAEAEA;
+        background: $white;
+        display: block;
+    }
+
+    &--red {
+        a {
+            background: $primary-color;
+            color: $white;
+            font-weight: bold;
+        }
+    }
+}

@@ -12,7 +12,7 @@ export function Box({ className, image, badgeArrow, badgeArrowRounded, date, aut
             {badgeArrowRounded && <BadgeArrowRounded text={badgeArrowRounded} />}
             <div className="box__content">
                 <div className="box__specs">
-                    {badgeArrow && <Link href={badgeArrow}><BadgeArrowRight text={badgeArrow} /></Link>}  {date && <Link href={date}><Date text={date} /></Link>} {author && <Link href={author}><Author text={`/ ${author}`} /></Link>}
+                    {badgeArrow && <Link href={badgeArrow}><BadgeArrowRight text={badgeArrow} /></Link>}  {date && <Link href={date}><Date>{date}</Date></Link>} {author && <Link href={author}><Author text={`/ ${author}`} /></Link>}
                 </div>
                 <p className='box__head'>
                     <Link href={head}>{head}</Link>

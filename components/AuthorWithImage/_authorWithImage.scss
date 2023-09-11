@@ -1,0 +1,24 @@
+.author {
+    position: relative;
+    figure {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        figcaption {
+            margin-left: 8px;
+        }
+    }
+
+    .badge-arrow-rounded {
+        top: 50%;
+        left: 200px;
+        transform: translateY(-50%);
+    }
+
+}

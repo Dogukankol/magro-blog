@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Date({text="12 DEC 2019"}) {
+function Date({children}) {
   return (
-    <span className="box__date">{text}</span>
+    <span className="box__date">{children}</span>
   )
 }
 
