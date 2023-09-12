@@ -17,6 +17,7 @@ import { VideoThumbnail, VideoFull} from './Video';
 import Tags from './Tags';
 import SimpleIconText from './SimpleIconText'
 import OtherCategories from './OtherCategories'
+import CategoryBox from './CategoryBox'
 
 
 
@@ -44,5 +45,6 @@ export { Header,
         VideoFull,
         Tags,
         SimpleIconText,
-        OtherCategories
+        OtherCategories,
+        CategoryBox
 };

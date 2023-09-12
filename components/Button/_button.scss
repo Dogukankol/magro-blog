@@ -1,10 +1,31 @@
 .button {
     &__primary {
         font-size: 14px;
-        
-letter-spacing: 0.86px;
-color: $white;
-background: #121212;
-padding: 13.5px 32px;
+        letter-spacing: 0.86px;
+        color: $white;
+        background: #121212;
+        padding: 13.5px 32px;
+    }
+
+    &__secondary {
+        font-size: 16px;
+        background: $primary-color;
+        padding: 12px 32px 13px;
+        font-weight: bold;
+    }
+
+    &__load-more {
+        font-size: 16px;
+        border: 1px solid $secondary-color;
+        line-height: 48px;
+        min-width: 220px;
+        padding: 0 14px;
+        margin: 0 auto;
+        font-weight: 600;
+        display: block;
+
+        svg {
+            margin-right: 12px;
+        }
     }
 }

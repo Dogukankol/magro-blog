@@ -2,7 +2,20 @@
     margin-top: 65px;
 
     h4 {
-        margin-bottom: 30px;
+        margin-bottom: 45px;
+        position: relative;
+        padding-left: 20px;
+        border-left: 3px solid $primary-color;
+
+        &::after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 13px;
+            left: 0px;
+            background: $primary-color;
+        }
     }
 
     .box__full {
@@ -22,7 +35,7 @@
                 }
             }
         }
-    
+
         .box {
             &__content {
                 margin-top: 30px;
@@ -35,7 +48,7 @@
                     margin-left: 0;
                 }
             }
-    
+
             &__head {
                 font-size: 36px;
                 margin-bottom: 25px;
@@ -44,10 +57,10 @@
             &__specs {
                 margin-bottom: 15px;
             }
-    
-            
+
+
         }
-    
+
         .author {
             figcaption {
                 display: flex;

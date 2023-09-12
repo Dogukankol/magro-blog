@@ -1,0 +1,128 @@
+.category-page {
+    padding-top: 100px;
+
+    @include phone {
+        padding-top: 40px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+        position: relative;
+        padding-left: 20px;
+        border-left: 3px solid $primary-color;
+        font-size: 40px;
+
+        &::after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 13px;
+            left: 0px;
+            background: $primary-color;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .category-box {
+            @include borderRadius(10px);
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            color: $white;
+            margin-bottom: 40px;
+            max-width: 560px;
+            width: 100%;
+
+            @include phone {
+                margin-bottom: 20px;
+            }
+
+            &>a {
+                &>figure {
+                    position: relative;
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        background: rgba($color: $secondary-color, $alpha: 0.5);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+
+            &__content {
+                position: absolute;
+                bottom: 50px;
+                left: 60px;
+
+                @include phone {
+                    bottom: 20px;
+                    left: 20px;
+                }
+
+                .button__secondary {
+                    @include phone {
+                        padding: 7px 16px 8px;
+                    }
+                }
+            }
+
+            &__specs {
+                color: #C6C6C6;
+            }
+
+            &__head {
+                font-size: 32px;
+                font-weight: bold;
+                max-width: calc(100% - 40px);
+                width: 100%;
+                margin: 12px 0 25px;
+
+                @include phone {
+                    font-size: 16px;
+                    margin: 8px 0 16px;
+                }
+            }
+
+
+            .author {
+                position: absolute;
+                top: 38px;
+                left: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: calc(100% - 50px - 38px);
+
+                @include phone {
+                    top: 20px;
+                    left: 20px;
+                    width: calc(100% - 40px);
+                }
+
+                figcaption {
+                    span {
+                        display: block;
+                    }
+                }
+
+                .badge-fire {
+                    margin: 0;
+                    color: $white;
+
+                    svg {
+                        color: $white;
+                    }
+                }
+            }
+
+        }
+    }
+}
