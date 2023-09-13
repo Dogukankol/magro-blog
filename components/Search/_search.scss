@@ -1,0 +1,30 @@
+.search {
+    position: relative;
+    input {
+        background: rgba($color: #F2F2F2, $alpha: 0.8);
+        border-radius: 40px;
+        color: $secondary-color;
+        font-size: 18px;
+        width: 100%;
+        padding: 0 32px;
+        line-height: 68px;
+        font-weight: 500;
+
+        &::placeholder {
+            color: #9FA4AF;
+        }
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: $white;
+        background: $primary-color;
+        border-radius: 50%;
+    }
+}

@@ -10,7 +10,9 @@ function Subscribe() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(value)
+        if(value) {
+          console.log(value);
+      }
     }
   return (
     <form onSubmit={handleSubmit} className='subscribe'>

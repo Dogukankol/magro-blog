@@ -11,7 +11,7 @@ function HeaderMenu({isOpen}) {
                     menuList.map((item, key) => (
 
                         <li key={key}>
-                            <Link href="#" >{item}</Link>
+                            <Link href={item} >{item}</Link>
                         </li>
                     ))
                 }

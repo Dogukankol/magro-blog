@@ -18,6 +18,7 @@ import Tags from './Tags';
 import SimpleIconText from './SimpleIconText'
 import OtherCategories from './OtherCategories'
 import CategoryBox from './CategoryBox'
+import Search from './Search'
 
 
 
@@ -46,5 +47,6 @@ export { Header,
         Tags,
         SimpleIconText,
         OtherCategories,
-        CategoryBox
+        CategoryBox,
+        Search
 };

@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Logo from "@/assets/images/logo@2x.png"
 import HeaderSearch from './HeaderSearch';
 import HeaderMenu from './HeaderMenu';
+import Link from 'next/link';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,10 @@ function Header() {
         <div className="container">
           <div className="header__main__upper">
             <button className='header__menu--opener' onClick={handleOpen}><FontAwesomeIcon icon={faBars} />MENU</button>
+            <Link href="/">
             <Image src={Logo}  alt="Logo" className='header__logo' />
+
+            </Link>
             <HeaderSearch />
           </div>
           <div className="header__main__bottom">
