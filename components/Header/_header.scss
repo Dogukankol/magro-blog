@@ -1,5 +1,6 @@
 .header {
-    overflow-x: hidden;
+    position: relative;
+    z-index: 2;
 
     &__stripe {
         height: 50px;
@@ -187,6 +188,8 @@
     }
 
     &__nav {
+        position: relative;
+
         @include phone {
             display: none;
         }
@@ -199,7 +202,7 @@
 
         ul {
             display: flex;
-            
+
             @include phone {
                 overflow: scroll;
                 padding-bottom: 5px;
@@ -213,6 +216,72 @@
                     text-transform: uppercase;
                     letter-spacing: 1.02px;
                     font-size: 17px;
+
+                    &:hover+.header__nav__submenu {
+                        display: flex;
+                    }
+                }
+            }
+
+            .header__nav__submenu {
+                display: none;
+                width: 100%;
+                height: 400px;
+                position: absolute;
+                z-index: 1;
+                top: 200%;
+                left: 0;
+                padding: 20px;
+                -webkit-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.34);
+                -moz-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.34);
+                box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.34);
+                background: #ffffff;
+                flex-direction: column;
+
+
+                a {
+                    color: #363636;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+
+    &__language {
+        margin-left: 14px;
+        position: relative;
+
+        button {
+            font-size: 16px;
+        }
+
+        .language__list {
+            display: none;
+            background: #ffffff;
+            border: 1px solid #363636;
+            border-top: none;
+            width: 100%;
+
+            &.active {
+                display: block;
+                position: absolute;
+                top: 180%;
+                left: 0;
+            }
+
+            ul {
+                li {
+                    a {
+                        display: block;
+                        line-height: 1.5;
+                        padding: 2px 4px;
+
+
+                        &:hover {
+                            color: #ffffff;
+                            background: #a3a2a2;
+                        }
+                    }
                 }
             }
         }

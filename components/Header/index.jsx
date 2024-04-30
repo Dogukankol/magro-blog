@@ -1,5 +1,5 @@
 "use client"
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import HeaderSlider from './HeaderSlider'
 import HeaderSocialMedia from './HeaderSocialMedia'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +9,7 @@ import Logo from "@/assets/images/logo@2x.png"
 import HeaderSearch from './HeaderSearch';
 import HeaderMenu from './HeaderMenu';
 import Link from 'next/link';
+import HeaderLang from './HeaderLang';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,7 @@ function Header() {
         <div className='container'>
           <HeaderSlider />
           <HeaderSocialMedia />
+          <HeaderLang />
         </div>
       </div>
       <div className='header__main'>
@@ -29,7 +31,7 @@ function Header() {
           <div className="header__main__upper">
             <button className='header__menu--opener' onClick={handleOpen}><FontAwesomeIcon icon={faBars} />MENU</button>
             <Link href="/">
-            <Image src={Logo}  alt="Logo" className='header__logo' />
+              <Image src={Logo} alt="Logo" className='header__logo' />
 
             </Link>
             <HeaderSearch />

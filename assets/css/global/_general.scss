@@ -19,10 +19,10 @@ body {
 }
 
 .container {
-    display: block;
-    margin: 0 auto;
-    max-width: 1170px;
-    padding: 0;
+	display: block;
+	margin: 0 auto;
+	max-width: 1170px;
+	padding: 0;
 	width: 100%;
 
 	@include phone {
@@ -33,6 +33,8 @@ body {
 html,
 main {
 	height: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 img,
@@ -78,6 +80,7 @@ input,
 span,
 button {
 	border: none;
+
 	&:focus {
 		outline: none;
 	}
