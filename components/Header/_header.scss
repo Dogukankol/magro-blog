@@ -261,12 +261,16 @@
             border: 1px solid #363636;
             border-top: none;
             width: 100%;
+            position: absolute;
+            top: 34px;
+            left: 0;
+
+            @include phone {
+                top: 30px;
+            }
 
             &.active {
                 display: block;
-                position: absolute;
-                top: 180%;
-                left: 0;
             }
 
             ul {
