@@ -219,6 +219,10 @@
 
                     &:hover+.header__nav__submenu {
                         display: flex;
+
+                        @include phone {
+                            display: none;
+                        }
                     }
                 }
             }
