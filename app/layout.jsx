@@ -1,8 +1,9 @@
 import "@/assets/css/styles.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css"; 
 
-import { Header, Footer } from '@/components/'
+import { Header, Footer, Search } from '@/components/'
 import { config } from "@fortawesome/fontawesome-svg-core";
+import SearchBig from "@/components/Search/SearchBig";
 config.autoAddCss = false; 
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <SearchBig />
       </body>
     </html>
   )

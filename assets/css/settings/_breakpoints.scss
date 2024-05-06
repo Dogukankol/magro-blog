@@ -13,6 +13,12 @@ $laptop-max: 1440px;
   }
 }
 
+@mixin minPhone {
+  @media screen and (min-width: $phone-max) {
+    @content
+  }
+}
+
 @function rem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;

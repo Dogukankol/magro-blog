@@ -17,6 +17,10 @@ function Header() {
     setIsOpen(!isOpen)
   }
 
+  const handleClose = () => {
+    setIsOpen(false)
+  }
+
   return (
     <header className='header'>
       <div className='header__stripe'>
@@ -37,7 +41,7 @@ function Header() {
             <HeaderSearch />
           </div>
           <div className="header__main__bottom">
-            <HeaderMenu isOpen={isOpen} />
+            <HeaderMenu isOpen={isOpen} handleClose={handleClose} />
           </div>
         </div>
       </div>

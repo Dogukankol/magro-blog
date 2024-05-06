@@ -1,8 +1,10 @@
+import { faChevronCircleDown, faChevronDown, faClose } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
 
 
-function HeaderMenu({ isOpen }) {
+function HeaderMenu({ isOpen, handleClose }) {
     // const menuList = ["HOME", "ENTERTAINMENT", "FASHION", "BUSINESS", "TEACH", "SPORTS", "CONTACT"];
     const menuList = [{
         category: "HOME",
@@ -237,13 +239,35 @@ function HeaderMenu({ isOpen }) {
         href: "/"
     }
     ]
+
+    const onOpenSubmenu = (event) => {
+        event.preventDefault();
+        const el = event.target;
+        const parent = el.closest("li");
+        const wrapper = el.closest("ul");
+
+        if(parent.querySelector("ul")) {
+            wrapper.querySelectorAll(".active").forEach(item => {
+                item.classList.remove("active")
+            });
+            parent.classList.add("active");
+        }
+    }
+
+
     return (
         <nav className={`header__nav ${isOpen ? "header__nav--open" : ""}`.trim()}>
+        <button className='header__nav__close' onClick={handleClose}>
+            <FontAwesomeIcon icon={faClose}></FontAwesomeIcon>
+        </button>
             <ul>
                 {
                     menuList.map((item, key) => (
                         <li key={key}>
-                            <Link href={item.href} >{item.category}</Link>
+                            <React.Fragment key={key}>
+                                <Link  href={item.href} >{item.category}</Link>
+                                {item.subMenu && <FontAwesomeIcon icon={faChevronDown} onClick={onOpenSubmenu} /> }
+                            </React.Fragment>
                             {item.subMenu &&
                                 <ul className='header__nav__submenu'>
                                     {

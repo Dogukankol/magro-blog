@@ -191,12 +191,20 @@
         position: relative;
 
         @include phone {
-            display: none;
+            position: fixed;
+            width: 100vw;
+            height: 100dvh;
+            top: -100%;
+            left: 0;
+            background: #363636;
+            z-index: 9;
+            padding: 80px 20px 40px;
+            transition: all .2s ease-in-out;
         }
 
         &--open {
             @include phone {
-                display: block;
+                top: 0;
             }
         }
 
@@ -206,23 +214,67 @@
             @include phone {
                 overflow: scroll;
                 padding-bottom: 5px;
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
             }
 
             li {
-                margin-right: 48px;
+                @include phone {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding: 0 10px;
+                }
 
-                a {
+                &>a {
                     color: $white;
                     text-transform: uppercase;
                     letter-spacing: 1.02px;
                     font-size: 17px;
+                    padding: 20px 24px;
 
-                    &:hover+.header__nav__submenu {
+                    @include phone {
+                        padding: 6px 0;
+                        display: block;
+                    }
+                }
+
+                &:first-child {
+                    &>a {
+                        padding-left: 0;
+                    }
+                }
+
+                
+                @include minPhone {                    
+                    &:hover .header__nav__submenu {
                         display: flex;
 
                         @include phone {
                             display: none;
                         }
+                    }
+                }
+
+                svg {
+                    display: none;
+
+                    @include phone {
+                        display: block;
+                    }
+
+                    path {
+                        color: #a3a2a2;
+                    }
+                }
+
+                &.active {
+                    background: #737373;
+                    margin-bottom: 16px;
+                    .header__nav__submenu {
+                        display: flex;
                     }
                 }
             }
@@ -246,10 +298,46 @@
                 a {
                     color: #363636;
                     line-height: 2;
+
+                    @include phone {
+                        color: #ffffff;
+                    }
+                }
+
+                @include phone {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    top: 0;
+                    left: 0;
+                    padding: 0;
+                    background: transparent;
+                    box-shadow: none;
                 }
             }
         }
+
+        &__close {
+            position: absolute;
+            padding: 20px;
+            top: 0;
+            right: 8px;
+            display: none;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                path {
+                    color: #ffffff;
+                }
+            }
+
+            @include phone {
+                display: block;
+            }
+        }
     }
+
 
     &__language {
         margin-left: 14px;

@@ -129,3 +129,9 @@ h4 {
 	font-size: 32px;
 	font-weight: bold;
 }
+
+.visible-not {
+	visibility: none;
+	height: 0px;
+	width: 0px;
+}

@@ -16,8 +16,13 @@ function HeaderSearch() {
         }
     }
 
+    const openBigSearch = (event) => {
+        const bigSearch = document.querySelector(".search__full");
+        bigSearch.classList.add("active");
+    }
+
     return (
-        <form onSubmit={handleSubmit} className="header__search">
+        <form className="header__search" onClick={openBigSearch}>
             <input type="text" placeholder="SEARCH" onChange={handleInput} />
             <button type='submit'><FontAwesomeIcon icon={faSearch} /></button>
         </form>

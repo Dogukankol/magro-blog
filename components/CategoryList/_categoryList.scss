@@ -282,6 +282,7 @@
 
                 @include phone {
                     max-width: 100%;
+                    width: 100%;
                 }
 
                 @media screen and (min-width: 992px) {
@@ -298,6 +299,15 @@
 
                             &__head {
                                 color: $white;
+                            }
+                        }
+
+                        &>a {
+                            height: 348px;
+                            display: block;
+
+                            figure {
+                                height: 100%;
                             }
                         }
                     }
