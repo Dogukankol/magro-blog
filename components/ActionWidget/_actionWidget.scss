@@ -1,0 +1,47 @@
+.action__widget {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+
+    @include phone {
+        margin-top: 30px;
+    }
+
+    &__col {
+        width: 33.33%;
+        border-right: 1px solid #fff;
+
+        &:last-child {
+            border: none;
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: #C72026;
+            text-align: center;
+
+            span {
+                font-size: 24px;
+                color: #fff;
+                margin-top: 12px;
+
+                @include phone {
+                    font-size: 16px;
+                }
+            }
+
+            svg {
+                width: 30px;
+                height: 30px;
+                path {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

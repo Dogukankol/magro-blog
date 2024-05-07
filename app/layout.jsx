@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Header, Footer, Search } from '@/components/'
 import { config } from "@fortawesome/fontawesome-svg-core";
 import SearchBig from "@/components/Search/SearchBig";
+import ActionWidget from "@/components/ActionWidget";
 config.autoAddCss = false; 
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>
           {children}
+          <ActionWidget />
         </main>
         <Footer />
         <SearchBig />
