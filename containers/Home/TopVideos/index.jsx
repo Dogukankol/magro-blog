@@ -18,21 +18,21 @@ function TopVideos() {
         head: "He Speaks 11 Languages - 7 Tricks To Learn Any",
         time: "20 MIN AGO",
         author: "ROKISTAN WAINS 1",
-        videoSrc: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        videoSrc: "https://www.youtube.com/embed/uYQR5ktq7W0"
         
     },
     {
         head: "Goodbye To Snoring, SayHello to Sleep",
         time: "30 MIN AGO",
         author: "ROKISTAN WAINS 2",
-        videoSrc: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+        videoSrc: "https://www.youtube.com/embed/9xwazD5SyVg"
 
     },
     {
         head: "Discovering Sydney’s Must - See Attractions",        
         time: "10 MIN AGO",
         author: "ROKISTAN WAINS 3",
-        videoSrc: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+        videoSrc: "https://www.youtube.com/embed/D0UnqGm_miA"
 
     }
     ]

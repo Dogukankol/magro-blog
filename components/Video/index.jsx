@@ -28,7 +28,7 @@ export function VideoThumbnail({ videoSrc, author, head = "He Speaks 11 Language
 }
 
 
-export function VideoFull({ videoSrc="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4", head = "Under Marketing Chief Bruno Cardinali, Popeyes Is Eating", time = "20 MIN AGO", author = "ROKISTAN WAINS" }) {
+export function VideoFull({ videoSrc="https://www.youtube.com/embed/D0UnqGm_miA", head = "Under Marketing Chief Bruno Cardinali, Popeyes Is Eating", time = "20 MIN AGO", author = "ROKISTAN WAINS" }) {
     const videoRef = useRef(null);
     const [isPlay, setIsPlay] = useState(false);
 
@@ -43,11 +43,12 @@ export function VideoFull({ videoSrc="http://commondatastorage.googleapis.com/gt
     }
     return (
         <div className="video__full">
-            <video controls={isPlay} ref={videoRef} poster='https://dummyimage.com/870x542/3a3a3a/fff'>
+            {/* <video controls={isPlay} ref={videoRef} poster='https://dummyimage.com/870x542/3a3a3a/fff'>
                 <source src={videoSrc} type="video/mp4" />
                 Your browser does not support the video tag.
-            </video>
-            {
+            </video> */}
+            <iframe width={870} height={542} src={videoSrc} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+            {/* {
                 !isPlay && <button className='video__starter' onClick={handlePlayVideo}><FontAwesomeIcon icon={faPlay} /></button>
             }
             {
@@ -56,7 +57,7 @@ export function VideoFull({ videoSrc="http://commondatastorage.googleapis.com/gt
                     <p className='video__head'>{head}</p>
                     <p className='video__specs'><FontAwesomeIcon icon={faYoutube} /> {author} / {time}</p>
                 </div>
-            }
+            } */}
 
         </div>
     )

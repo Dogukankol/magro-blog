@@ -135,3 +135,62 @@ h4 {
 	height: 0px;
 	width: 0px;
 }
+
+.d-flex {
+	display: flex;
+}
+
+.row-reverse {
+	flex-direction: row-reverse;
+}
+
+.page {
+	&__tab {
+		padding-top: 100px;
+
+		@include phone {
+			padding-top: 20px;
+		}
+
+		.tabs {
+			display: flex;
+			justify-content: space-between;
+			&__head {
+				max-width: 320px;
+				&__arrow {
+					.tabs__head__item {
+						text-align: left;
+						width: 100%;
+
+						&--active {
+							background: #de0000;
+						}
+	
+						sub {
+							display: block;
+						}
+					}
+				}
+			}
+
+			&__content {
+				max-width: calc((100% - 320px - 30px));
+
+				@include phone {
+					max-width: 100%;
+				}
+			}
+		}
+
+		&--row-reverse {
+			.tabs {
+				flex-direction: row-reverse;
+
+				@include phone {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}
+
