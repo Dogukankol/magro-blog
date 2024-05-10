@@ -19,6 +19,7 @@ import SimpleIconText from './SimpleIconText'
 import OtherCategories from './OtherCategories'
 import CategoryBox from './CategoryBox'
 import Search from './Search'
+import Accordion from './Accordion'
 
 
 
@@ -48,5 +49,6 @@ export { Header,
         SimpleIconText,
         OtherCategories,
         CategoryBox,
-        Search
+        Search,
+        Accordion
 };
