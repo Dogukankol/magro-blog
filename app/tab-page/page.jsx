@@ -4,16 +4,20 @@ import React from 'react'
 function page() {
     const accordionList = [{
         title: "1.1 BÖLÜM LOREM IPSUM?",
-        description: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus lectus. Maecenas turpis magna, fringilla non nisi ut, posuere laoreet quam. Donec purus neque, imperdiet vitae varius quis, consequat eu nisl. Sed ultricies sollicitudin nibh, id posuere dui laoreet vitae. Donec congue massa vel justo mattis, eget sagittis erat maximus. Sed vehicula semper suscipit. Mauris lacinia scelerisque ligula sit amet feugiat. Cras pulvinar sit amet nisl non faucibus. Curabitur dui nisi, consequat sed mi a, lacinia vestibulum arcu."
+        description: "1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus lectus. Maecenas turpis magna, fringilla non nisi ut, posuere laoreet quam. Donec purus neque, imperdiet vitae varius quis, consequat eu nisl. Sed ultricies sollicitudin nibh, id posuere dui laoreet vitae. Donec congue massa vel justo mattis, eget sagittis erat maximus. Sed vehicula semper suscipit. Mauris lacinia scelerisque ligula sit amet feugiat. Cras pulvinar sit amet nisl non faucibus. Curabitur dui nisi, consequat sed mi a, lacinia vestibulum arcu.",
+        isOpenProp: true
     }, {
         title: "1.2 BÖLÜM LOREM IPSUM?",
-        description: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus lectus. Maecenas turpis magna, fringilla non nisi ut, posuere laoreet quam. Donec purus neque, imperdiet vitae varius quis, consequat eu nisl. Sed ultricies sollicitudin nibh, id posuere dui laoreet vitae. Donec congue massa vel justo mattis, eget sagittis erat maximus. Sed vehicula semper suscipit. Mauris lacinia scelerisque ligula sit amet feugiat. Cras pulvinar sit amet nisl non faucibus. Curabitur dui nisi, consequat sed mi a, lacinia vestibulum arcu."
+        description: "2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus lectus. Maecenas turpis magna, fringilla non nisi ut, posuere laoreet quam. Donec purus neque, imperdiet vitae varius quis, consequat eu nisl. Sed ultricies sollicitudin nibh, id posuere dui laoreet vitae. Donec congue massa vel justo mattis, eget sagittis erat maximus. Sed vehicula semper suscipit. Mauris lacinia scelerisque ligula sit amet feugiat. Cras pulvinar sit amet nisl non faucibus. Curabitur dui nisi, consequat sed mi a, lacinia vestibulum arcu.",
+        isOpenProp: false
     }, {
         title: "1.3 BÖLÜM LOREM IPSUM?",
-        description: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus lectus. Maecenas turpis magna, fringilla non nisi ut, posuere laoreet quam. Donec purus neque, imperdiet vitae varius quis, consequat eu nisl. Sed ultricies sollicitudin nibh, id posuere dui laoreet vitae. Donec congue massa vel justo mattis, eget sagittis erat maximus. Sed vehicula semper suscipit. Mauris lacinia scelerisque ligula sit amet feugiat. Cras pulvinar sit amet nisl non faucibus. Curabitur dui nisi, consequat sed mi a, lacinia vestibulum arcu."
+        description: "3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus lectus. Maecenas turpis magna, fringilla non nisi ut, posuere laoreet quam. Donec purus neque, imperdiet vitae varius quis, consequat eu nisl. Sed ultricies sollicitudin nibh, id posuere dui laoreet vitae. Donec congue massa vel justo mattis, eget sagittis erat maximus. Sed vehicula semper suscipit. Mauris lacinia scelerisque ligula sit amet feugiat. Cras pulvinar sit amet nisl non faucibus. Curabitur dui nisi, consequat sed mi a, lacinia vestibulum arcu.",
+        isOpenProp: false
     }, {
         title: "1.4 BÖLÜM LOREM IPSUM?",
-        description: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus lectus. Maecenas turpis magna, fringilla non nisi ut, posuere laoreet quam. Donec purus neque, imperdiet vitae varius quis, consequat eu nisl. Sed ultricies sollicitudin nibh, id posuere dui laoreet vitae. Donec congue massa vel justo mattis, eget sagittis erat maximus. Sed vehicula semper suscipit. Mauris lacinia scelerisque ligula sit amet feugiat. Cras pulvinar sit amet nisl non faucibus. Curabitur dui nisi, consequat sed mi a, lacinia vestibulum arcu."
+        description: "4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis tellus lectus. Maecenas turpis magna, fringilla non nisi ut, posuere laoreet quam. Donec purus neque, imperdiet vitae varius quis, consequat eu nisl. Sed ultricies sollicitudin nibh, id posuere dui laoreet vitae. Donec congue massa vel justo mattis, eget sagittis erat maximus. Sed vehicula semper suscipit. Mauris lacinia scelerisque ligula sit amet feugiat. Cras pulvinar sit amet nisl non faucibus. Curabitur dui nisi, consequat sed mi a, lacinia vestibulum arcu.",
+        isOpenProp: false
     },]
     return (
         <div className="page__tab page__tab--row-reverse">

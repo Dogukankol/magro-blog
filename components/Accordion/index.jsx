@@ -3,8 +3,8 @@ import { faChevronCircleDown, faChevronDown } from '@fortawesome/free-solid-svg-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react'
 
-function Accordion({ title, description }) {
-    const [isOpen, setIsOpen] = useState(false);
+function Accordion({ title, description, isOpenProp }) {
+    const [isOpen, setIsOpen] = useState(isOpenProp);
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen)
